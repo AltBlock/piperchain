@@ -125,8 +125,11 @@ before_deploy:
 - rm -rf builds
 - mkdir builds
 - cp piperchain-${TRAVIS_TAG}-${LABEL}.tar.gz builds
+- cd builds
 - ls -l
 - cd ..
+- cd ..
+- ls -l
 
 deploy:
   - provider: releases
