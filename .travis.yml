@@ -133,6 +133,7 @@ deploy:
     on:
       repo: AltBlock/piperchain
       # tags: true
+      branch: development
       condition: "$_DEPLOYABLE = true"
       draft: true
 
