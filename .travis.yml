@@ -132,7 +132,7 @@ deploy:
     skip_cleanup: true
     on:
       repo: AltBlock/piperchain
-      # tags: true
+      tags: true
       branch: development
       condition: "$_DEPLOYABLE = true"
       draft: true
