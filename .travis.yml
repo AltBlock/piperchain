@@ -115,12 +115,16 @@ before_deploy:
 - ${STRIP} ${TARGETS}
 - rm -rf piperchain-${TRAVIS_TAG}
 - mkdir piperchain-${TRAVIS_TAG}
+- cd piperchain-${TRAVIS_TAG}
+- ls -l
+- cd ..
 - cp ${TARGETS} piperchain-${TRAVIS_TAG}/
 - cp ../../LICENSE piperchain-${TRAVIS_TAG}/
 - tar cvfz piperchain-${TRAVIS_TAG}-${LABEL}.tar.gz piperchain-${TRAVIS_TAG}/
 - rm -rf builds
 - mkdir builds
 - cp piperchain-${TRAVIS_TAG}-${LABEL}.tar.gz builds
+- ls -l
 - cd ..
 
 deploy:
