@@ -111,6 +111,7 @@ script:
 before_deploy:
 - if [[ "${TRAVIS_TAG}" == "" ]]; then export TRAVIS_TAG=${TRAVIS_COMMIT} ; fi
 - cd src
+- ls -l
 - TARGETS="PiperChaind miner piperwallet piper-service piperwallet-beta cryptotest wallet-api"
 - ${STRIP} ${TARGETS}
 - rm -rf piperchain-${TRAVIS_TAG}
